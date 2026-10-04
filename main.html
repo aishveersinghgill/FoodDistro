@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- upcoming events -->
+    <style> 
+        body {
+            background-color: rgb(255,255,255);
+            color: rgb(17,17,17);
+            font-family: 'dm sans',system-ui, -apple-system, 'Segoe UI', sans-serif;
+        }
+        .upsec{
+            border-radius: 10px;
+            background-color: rgb(240,240,240);
+            padding: 0 0 4px 0;
+        }
+        .upsec > h3{
+            text-align: left;
+            margin: 0 0 -15px 0;
+            padding: 10px 10px;
+        }
+    </style>
     <link rel="stylesheet" href="upcoming/upcoming.css">
 </head>
 <body>
-    <div id="upcoming"></div>
-    <script src="upcoming/upcoming.js"></script>
+    <section class="upsec"> <!--upcoming events-->
+            <h3 class="upcoming-section">Upcoming Events</h3>
+            <div id="upcoming"></div>
+            <script src="upcoming/upcoming.js"></script>
+            
+    </section>
 </body>
 </html>

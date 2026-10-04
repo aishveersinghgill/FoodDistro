@@ -1,4 +1,31 @@
 .upcoming {
-    background-color:rgb(12, 12, 89);
-    color:darkcyan;
+    background-color:rgb(255,255,255);
+    color:rgb(119,119,119);
+
+    /* scroll */
+    height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    border-radius: 10px;
+
+    /* spacing */
+    padding: -10px;
+    box-sizing: border-box;
+    margin: 10px;
+    font-family:'dm sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+.upcoming::-webkit-scrollbar {
+    width: 5px;
+}
+.upcoming::-webkit-scrollbar-thumb {
+    background: darkcyan;
+    border-radius: 10px;
+}
+.upcoming::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+.upcoming::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 255, 255);
 }
