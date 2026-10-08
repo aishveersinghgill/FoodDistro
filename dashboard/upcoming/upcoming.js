@@ -1,4 +1,4 @@
-fetch("upcoming/upcoming.html")
+fetch("dashboard/upcoming/upcoming.html")
     .then((response) => {
         if (!response.ok) {
             throw new Error("Network response was not ok");

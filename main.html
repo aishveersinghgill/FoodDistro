@@ -7,29 +7,123 @@
     <!-- upcoming events -->
     <style> 
         body {
-            background-color: rgb(255,255,255);
+            margin: 0;
+            background-color: rgb(245,245,245);
             color: rgb(17,17,17);
             font-family: 'dm sans',system-ui, -apple-system, 'Segoe UI', sans-serif;
         }
         .upsec{
             border-radius: 10px;
-            background-color: rgb(240,240,240);
+            background-color: rgb(255, 255, 255);
             padding: 0 0 4px 0;
+            overflow: hidden;
         }
         .upsec > h3{
             text-align: left;
-            margin: 0 0 -15px 0;
-            padding: 10px 10px;
+            margin: 0;
+            padding: 16px 20px 8px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.35;
+        }
+        #dashboard-buttons {
+            display: contents;
+        }
+        main {
+            max-width: 1500px;
+            min-height: 100vh;
+            margin-left: calc(clamp(180px, 12vw, 200px) + 32px);
+            padding: 26px 30px 16px;
+        }
+        .page-header {
+            margin-bottom: 23px;
+        }
+        .page-header h1 {
+            margin: 0 0 5px;
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .page-subtitle {
+            margin: 0;
+            color: #777;
+            font-size: 13px;
+        }
+        .view-panel[hidden] {
+            display: none;
+        }
+        .page-placeholder {
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff;
+        }
+        .page-placeholder h2 {
+            margin: 0 0 6px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .page-placeholder p {
+            margin: 0;
+            color: #777;
+            font-size: 13px;
+        }
+        @media (max-width: 700px) {
+            main {
+                min-height: auto;
+                margin-left: 0;
+                padding: 22px 16px;
+            }
         }
     </style>
-    <link rel="stylesheet" href="upcoming/upcoming.css">
+    <link rel="stylesheet" href="dashboard/upcoming/upcoming.css">
+    <link rel="stylesheet" href="buttons/buttons.css">
+    <link rel="stylesheet" href="dashboard/food/food.css">
 </head>
 <body>
-    <section class="upsec"> <!--upcoming events-->
+    <nav class="dashboard-nav" aria-label="Main navigation">
+        <div id="dashboard-buttons"></div>
+        <script src="buttons/buttons.js"></script>
+    </nav>
+    <main>
+        <header class="page-header">
+            <h1 id="pageTitle">Dashboard</h1>
+            <p class="page-subtitle" id="pageSubtitle">Your distribution activity at a glance.</p>
+        </header>
+
+        <section id="view-dashboard" class="view-panel upsec">
             <h3 class="upcoming-section">Upcoming Events</h3>
             <div id="upcoming"></div>
-            <script src="upcoming/upcoming.js"></script>
-            
-    </section>
+            <script src="dashboard/upcoming/upcoming.js"></script>
+            <div id="food-widget"></div>
+        </section>
+        
+        <section id="view-overview" class="view-panel page-placeholder" hidden>
+            <h2>Overview</h2>
+            <p>Distribution activity summaries will appear here.</p>
+        </section>
+        
+        <section id="view-events" class="view-panel page-placeholder" hidden>
+            <h2>Distribution Events</h2>
+            <p>Event details will appear here.</p>
+        </section>
+        
+        <section id="view-supply" class="view-panel page-placeholder" hidden>
+            <h2>Supply</h2>
+            <p>Supply information will appear here.</p>
+            <div id="supply"></div>
+            <script src="dashboard/food/food.js"></script>
+        </section>
+        
+        <section id="view-volunteers" class="view-panel page-placeholder" hidden>
+            <h2>Volunteers</h2>
+            <p>Volunteer information will appear here.</p>
+        </section>
+        
+        <section id="view-centers" class="view-panel page-placeholder" hidden>
+            <h2>Distribution Centers</h2>
+            <p>Distribution center information will appear here.</p>
+        </section>
+
+    </main>
+    <script src="dashboard/food/food.js"></script>
 </body>
 </html>

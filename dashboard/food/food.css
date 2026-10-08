@@ -1,0 +1,21 @@
+.food-widget {
+    margin: 16px 0 10px;
+    padding: 16px 20px 18px;
+    border-radius: 10px;
+    background: #fff;
+    color: #111;
+    font-family: 'dm sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.food-widget h2 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.food-widget p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}

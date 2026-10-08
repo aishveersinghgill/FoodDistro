@@ -1,0 +1,57 @@
+.upcoming {
+    background-color:#ffffff;
+    color:rgb(17,17,17);
+
+    height: 72px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    border-radius: 10px;
+
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 10px 10px;
+    font-family:'dm sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.upcoming__items,
+.upcoming__item {
+    padding: 8px 0;
+}
+
+.upcoming__item-title {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.upcoming__item-date,
+.upcoming__item-description {
+    margin: 0 0 3px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.upcoming__item-date {
+    color: #555;
+}
+
+.upcoming__item-description {
+    color: #777;
+}
+.upcoming::-webkit-scrollbar {
+    width: 5px;
+}
+.upcoming::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.upcoming::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+.upcoming::-webkit-scrollbar-thumb:hover {
+    background: rgb(15, 16, 16);
+}
