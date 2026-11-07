@@ -6,10 +6,6 @@ Built for CSE326 (CA2) at Lovely Professional University. No framework, no build
 
 
 
-![FoodDistro dashboard](screenshots/dashboard.png)
-
-
-
 ## The problem
 
 Running a community meal drive means keeping track of four things at once:
