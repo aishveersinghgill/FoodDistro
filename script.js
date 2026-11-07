@@ -239,6 +239,11 @@ completed.addEventListener("click", function(e) {
         dashvol.children[volunteerIndex].textContent = volsun[volunteerIndex].replace(/<input type="submit" value="Remove" class="removebtn">/g, "")
     }
 })
+    const voluntIndex = volselect.indexOf(eventName)
+    if (voluntIndex !== -1) {
+        volselect.splice(voluntIndex, 1)
+        updateVolunteerSelect()
+}
     dasheve.children[index].textContent = centev[index].replace(/<input type="submit" value="Remove" class="removebtn">/g,"")
 })
 const removecentre=document.getElementById("locationList")
