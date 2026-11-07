@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <title>FoodDistro</title>
+  <circle cx="200" cy="200" r="200" fill="#80AEE8"/>
+  <circle cx="200" cy="200" r="184" fill="none" stroke="#5B0015" stroke-width="3"/>
+  <path d="M120 215 H280 A80 80 0 0 1 120 215 Z" fill="#5B0015"/>
+  <rect x="170" y="295" width="60" height="10" rx="5" fill="#5B0015"/>
+  <g fill="none" stroke="#5B0015" stroke-width="7" stroke-linecap="round">
+    <path d="M200 200 V135"/>
+    <path d="M165 200 Q153 160 122 148"/>
+    <path d="M235 200 Q247 160 278 148"/>
+  </g>
+  <circle cx="200" cy="115" r="12" fill="#F7F2E0"/>
+  <circle cx="114" cy="144" r="11" fill="#F7F2E0"/>
+  <circle cx="286" cy="144" r="11" fill="#F7F2E0"/>
+</svg>

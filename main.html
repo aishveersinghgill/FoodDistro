@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preload" as="image" href="dashboard.webp">
+    <link rel="preload" as="image" href="foodsup.webp">
+    <link rel="preload" as="image" href="volunteer.webp">
+    <link rel="preload" as="image" href="disevent.webp">
+    <link rel="preload" as="image" href="discenter.webp">
+    <link rel="preload" as="image" href="home.webp">
+    <link rel="preload" as="image" href="logo.svg">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="sidebar">
+            <div class="sidebartop">
+                <div class="logo">
+                    <img src="logo.svg" alt="FoodDistro Logo" class="logoimg">
+                    <span class="logotxt">FoodDistro</span>
+                </div>
+                <i class="bx bx-menu" id="btn"></i>
+            </div>
+            <ul>
+                <li>
+                    <a href="#" id="dash">
+                        <i class="bx bx-core" id="dash"/></i>
+                        <span class="navitems" id="dash">Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+                <li>
+                    <a href="#" id="food">
+                        <i class="bx bx-takeaway" id="food"/></i>
+                        <span class="navitems" id="food">Food Supply</span>
+                    </a>
+                    <span class="tooltip">Food-Supply</span> 
+                </li>
+                <li>
+                    <a href="#" id="vol">
+                        <i class="bx bx-hail" id="vol"/></i>
+                        <span class="navitems">Volunteers</span>
+                    </a>
+                    <span class="tooltip" id="vol">Volunteers</span>
+                </li>
+                <li>
+                    <a href="#" id="disev">
+                        <i class="bx bx-calendar-check" id="disev"/></i>
+                        <span class="navitems" id="disev">Distribution Events</span>
+                    </a>
+                    <span class="tooltip">Distribution-Events</span>
+                </li>
+                <li>
+                    <a href="#" id="disct">
+                        <i class="bx bx-location-alt-2" id="disct"/></i>
+                        <span class="navitems" id="disct">Distribution Centers</span>
+                    </a>
+                    <span class="tooltip">Distribution-Centers</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="main">
+            <div class="home active">
+                <div class="container">
+                    <h2 class="dashhead" style="color: #5b0015;">Welcome to FoodDistro</h2>
+                    <p class="dashfood" style="font-size: 20px; color:#5b0015">Please use the navigation bar on the left to access different sections of the dashboard. You can manage food supply, volunteers, distribution events, and distribution centers from here.</p>
+                </div>
+            </div>
+            <div class="dashboard">  
+                <div class="container">
+                    <h2 class="dashhead">Dashboard</h2>
+                    <div class="upcoming">
+                        <h3>Distribution Events</h3>
+                        <ul style="list-style: none ;" class="location-list" id="event-List"></ul>
+                    </div>
+                    <br>
+                    <div class="upcoming">
+                        <h3>Food Supply</h3>
+                        <ul style="list-style: none;" class="location-list" id="food-List"></ul>
+                    </div>
+                    <br>
+                    <div class="upcoming">
+                        <h3>Volunteers</h3>
+                        <ul style="list-style: none;" class="location-list" id="volunteer-List"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="foodsup">
+                <div class="container">
+                    <h2 class="dashhead">Food Supply</h2>
+                    <div class="dashfood">
+                        <h3>Edit List Of Food Supply</h3>
+                        <form id="foodsupplyForm">
+                            <label for="foodSupply" style="font-size: 20px; font-weight: 750; cursor:text;">Food Supply:</label>
+                            <input type="text" id="foodSupply" name="foodSupply" style="color:#5b0015; background-color: rgba(66,145,240,0.265); border: 1px solid #4285f4; border-radius: 5px; padding: 5px; width: 300px; cursor: text;">
+                            <input type="submit" value="Add Food" id="submitBtn" class="submitbtn">
+                        </form>
+                    </div>
+                    <br>
+                    <div class="dashfood">
+                        <h3>List Of Food Supply</h3>
+                        <ul style="list-style: none;" class="location-list" id="foodList"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="volunteer">
+                <div class="container">
+                <h2 class="dashhead">Volunteers</h2>
+                    <div class="dashfood">
+                        <h3>Edit List Of Volunteers</h3>
+                        <form id="volunteerForm">
+                            <label for="volunteerName" style="font-size: 20px; font-weight: 750; cursor:text;">Volunteer Name and Contact Information:</label>
+                            <br>
+                            <input type="text" id="volunteerName" name="volunteerName" placeholder="Enter volunteer name" style="color:#5b0015; background-color: rgba(66,145,240,0.265); border: 1px solid #4285f4; border-radius: 5px; padding: 5px; width: 200px; cursor: text;">
+                            <input type="text" id="volunteercontact" name="volunteerName" placeholder="Enter contact information" style="color:#5b0015; background-color: rgba(66,145,240,0.265); border: 1px solid #4285f4; border-radius: 5px; padding: 5px; width: 200px; cursor: text;">
+                            <select id="volSelect" name="volunteerName" style="color:#5b0015; background-color: rgba(66,145,240,0.265); border: 1px solid #4285f4; color:#5b0015;border-radius: 5px; padding: 5px; width: 200px; cursor: pointer;">
+                                <option value="" disabled selected>Assign Event</option>
+                            </select>
+                            <br>
+                            <input type="submit" value="Add Volunteer" id="submitBtn" class="submitbtn">
+                        </form>
+                    </div>
+                    <br>
+                    <div class="dashfood">
+                        <h3>List Of Volunteers</h3>
+                        <ul style="list-style: none;" class="location-list" id="volunteerList"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="distributionev">
+                <div class="container">
+                    <h2 class="dashhead">Distribution Events</h2>
+                    <div class="dashfood">
+                        <h3>Edit List Of Distribution Events</h3>
+                        <form id="centretimeForm">
+                            <label for="centretimeat" style="font-size: 20px; font-weight: 750; cursor:text;">Centre Time and Address:</label>
+                            <br>
+                            <select id="centreSelect" name="centretimeat" style="color:#5b0015; background-color: rgba(66,145,240,0.265); border: 1px solid #4285f4; color:#5b0015;border-radius: 5px; padding: 5px; width: 300px; cursor: pointer;">
+                                <option value="" disabled selected>Select a Centre</option>
+                            </select>
+                            <input type="time" id="centretimeat" name="centretimeat" style="color:#5b0015; background-color: rgba(66,145,240,0.265); border: 1px solid #4285f4; border-radius: 5px; padding: 5px; width: 300px; cursor: pointer;">
+                            <input type="date" id="centredateat" name="centredateat" style="color:#5b0015; background-color: rgba(66,145,240,0.265); border: 1px solid #4285f4; border-radius: 5px; padding: 5px; width: 300px; cursor: pointer;">
+                            <br>
+                            <input type="submit" value="Add Event Time" id="submitBtn" class="submitbtn">
+                        </form>
+                    </div>
+                    <br>
+                    <div class="dashfood">
+                        <h3>List Of Distribution Events</h3>
+                        <ul style="list-style: none;" class="location-list" id="eventList"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="distributionct">
+                <div class="container">
+                <h2 class="dashhead">Distribution Centres</h2>
+                    <div class="dashfood">
+                        <h3>Edit List Of Distribution Centres</h3>
+                        <form id="centreForm">
+                            <label for="centreName" style="font-size: 20px; font-weight: 750; cursor:text;">Centre Name and Address:</label>
+                            <br>
+                            <input type="text" id="centreName" name="centreName" placeholder="Enter centre name" style="color:#5b0015; background-color: rgba(66,145,240,0.265); border: 1px solid #4285f4; border-radius: 5px; padding: 5px; width: 300px; cursor: text;">
+                            <input type="text" id="centreAddress" name="centreName" placeholder="Enter centre address" style="color:#5b0015; background-color: rgba(66,145,240,0.265); border: 1px solid #4285f4; border-radius: 5px; padding: 5px; width: 300px; cursor: text;">
+                            <br>
+                            <input type="submit" value="Add Centre" id="submitBtn" class="submitbtn">
+                        </form>
+                    </div>
+                    <br>
+                    <div class="dashfood">
+                        <h3>List Of Distribution Centres</h3>
+                        <ul style="list-style: none;" class="location-list" id="locationList"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
